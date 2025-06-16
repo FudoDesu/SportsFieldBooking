@@ -1,5 +1,7 @@
 ﻿using BusinessObject.Entity;
+using BusinessObject.Model.JwtTokenModel;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
