@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace DataAccessObject.DAO
 {
-    public class UserDAO : GenericDAO<User>
+    public class TransactionDAO : GenericDAO<Transaction>
     {
-        public UserDAO() { }
-        public UserDAO(SportsFieldBookingContext context) => _context = context;
+        public TransactionDAO() { }
+        public TransactionDAO(SportsFieldBookingContext context) => _context = context;
     }
 }

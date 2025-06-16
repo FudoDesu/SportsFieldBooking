@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAO
+namespace DataAccessObject
 {
     public class GenericDAO<T> where T : class
     {
