@@ -10,6 +10,6 @@ Includes user login, booking system, and admin field management.
 - SQL Server database schema
 
 ## Technologies
-- C# .NET 6
+- C# .NET 8
 - SQL Server
-- Entity Framework Core (if used)
+- Entity Framework Core 
