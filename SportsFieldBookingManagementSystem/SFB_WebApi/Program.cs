@@ -1,11 +1,18 @@
 using BusinessObject.Mapping;
+using BusinessObject.Model.JwtTokenModel;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using RepositoryObject.Implement;
+using RepositoryObject.Interface;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.Configure<JwtConfig>(
+    builder.Configuration.GetSection("JwtConfig"));
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 // Add services to the container.
 
 builder.Services.AddAuthentication(options =>
@@ -21,8 +28,8 @@ builder.Services.AddAuthentication(options =>
         ValidAudience = builder.Configuration["JwtConfig:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey
         (Encoding.UTF8.GetBytes(builder.Configuration["JwtConfig:Key"])),
-        ValidateIssuer = string.IsNullOrEmpty(builder.Configuration["JwtConfig:Issuer"]),
-        ValidateAudience = string.IsNullOrEmpty(builder.Configuration["JwtConfig:Audience"]),
+        ValidateIssuer = !string.IsNullOrEmpty(builder.Configuration["JwtConfig:Issuer"]),
+        ValidateAudience = !string.IsNullOrEmpty(builder.Configuration["JwtConfig:Audience"]),
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true
     };
@@ -74,6 +81,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
