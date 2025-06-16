@@ -16,7 +16,6 @@ namespace SFB_WebApi.Controllers
     {
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
-        private string Message;
 
         public UserController(IUserRepository userRepository ,IMapper mapper)
         {
