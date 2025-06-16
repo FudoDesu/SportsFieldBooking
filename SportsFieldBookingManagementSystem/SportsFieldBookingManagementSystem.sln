@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObject", "SportsFieldBookingManagementSystem\BusinessObject.csproj", "{8A2468AD-3FE6-4704-A554-8A297F3AE8F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObject", "SportsFieldBookingManagementSystem\BusinessObject.csproj", "{8A2468AD-3FE6-4704-A554-8A297F3AE8F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{02589F38-A52F-4BB8-B866-755F4686F6E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessObject", "DAO\DataAccessObject.csproj", "{02589F38-A52F-4BB8-B866-755F4686F6E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryObject", "RO\RepositoryObject.csproj", "{8BE63921-5876-49E6-976D-43E951E17471}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFB_WebApi", "SFB_WebApi\SFB_WebApi.csproj", "{71740B15-5E0C-4FCA-992B-A768B931F2A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{02589F38-A52F-4BB8-B866-755F4686F6E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02589F38-A52F-4BB8-B866-755F4686F6E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02589F38-A52F-4BB8-B866-755F4686F6E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BE63921-5876-49E6-976D-43E951E17471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE63921-5876-49E6-976D-43E951E17471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE63921-5876-49E6-976D-43E951E17471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE63921-5876-49E6-976D-43E951E17471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71740B15-5E0C-4FCA-992B-A768B931F2A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71740B15-5E0C-4FCA-992B-A768B931F2A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71740B15-5E0C-4FCA-992B-A768B931F2A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71740B15-5E0C-4FCA-992B-A768B931F2A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

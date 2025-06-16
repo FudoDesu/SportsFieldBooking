@@ -15,8 +15,11 @@ namespace DataAccessObject
 
         public GenericDAO()
         {
-            _context = new SportsFieldBookingContext();
-            _dbSet = _context.Set<T>();
+            //_context = new SportsFieldBookingContext(); 
+            using (_context = new SportsFieldBookingContext())
+            {
+                _dbSet = _context.Set<T>();
+            }
         }
 
         public List<T> GetList()
